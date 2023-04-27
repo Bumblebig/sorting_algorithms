@@ -57,22 +57,22 @@ void s_merge(int *arr, int *arr_c, size_t size, size_t l, size_t r)
 
 /**
  * merge_sort - Sorts an array using the merge sort algorithm.
- * @arr: array to sort.
+ * @array: array to sort.
  * @size: length of the array.
  */
-void merge_sort(int *arr, size_t size)
+void merge_sort(int *array, size_t size)
 {
 	size_t i;
 	int *arr_c = NULL;
 
-	if (arr != NULL)
+	if (array != NULL)
 	{
 		arr_c = malloc(sizeof(int) * size);
 		if (arr_c != NULL)
 		{
 			for (i = 0; i < size; i++)
-				arr_c[i] = arr[i];
-			s_merge(arr, arr_c, size, 0, size);
+				arr_c[i] = array[i];
+			s_merge(array, arr_c, size, 0, size);
 			free(arr_c);
 		}
 	}
